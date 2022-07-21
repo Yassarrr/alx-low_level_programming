@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the value of a bit to 0 at a given index
+ * set_bit - sets the value of a bit to 1 at a given index
  * @n: unsigned long to change
- * @index: index to change to zero
+ * @index: index to change to one
  * Return: 1 if it worked or -1 if an error occurred
  */
 
-int clear_bit(unsigned long int *n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
-	int clear;
-
 	if (index > 53 || !n)
 		return (-1);
-	clear = 1 << index;
-	*n = (*n & ~clear) | ((0 << index) & clear);
+	(*n |= 1 << index);
 	return (1);
 }
