@@ -33,7 +33,7 @@ void copy_text_file(int f1, int f2, char *file1, char *file2)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 			close(f1);
 			close(f2);
-			exit(99;
+			exit(99);
 		}
 	}
 }
